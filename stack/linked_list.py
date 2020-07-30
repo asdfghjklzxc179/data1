@@ -22,42 +22,44 @@ class LinkedList:
         self.head = None  # stores a node, that corresponds the first node in list
         self.tail = None  # stores end of list n ode
 
+    def __str__(self):
+        output = ''
+        current_node = self.head
+        while current_node is not None:
+            output += f'{current_node.value} -> '
+            current_node = current_node.next_node
+        return output
 
-def add_to_head(self, value):
-    # create a new node to add
-    new_node = Node(value)
-    # check if list is empty
-    if self.head is None and self.tail is None:
-        self.head = new_node
-        self.tail = new_node
-    else:
-        # make new node the head
-        new_node.next_node = self.head
-        # move head to new node
-        self.head = new_node
+    def add_to_head(self, value):
+        # create a new node to add
+        new_node = Node(value)
+        # check if list is empty
+        if self.head is None and self.tail is None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            # make new node the head
+            new_node.next_node = self.head
+            # move head to new node
+            self.head = new_node
 
-    pass
+    def add_to_tail(self, value):
+        # check if list is empty
+        if self.head is None and self.tail is None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            self.tail.next_node = self.tail
+            self.tail = new_node
 
+    def remove_head(self):
+        if not self.head:
+            return None
+        if self.head.next_node = None:
+            head_value = self.head.value
+            self.head = None
+            self.tail = None
+            return None
 
-def add_to_tail(self, value):
-    # check if list is empty
-    if self.head is None and self.tail is None:
-        self.head = new_node
-        self.tail = new_node
-    else:
-        self.tail.next_node = self.tail
-        self.tail = new_node
-
-
-def remove_head(self):
-    if not self.head:
-        return None
-    if self.head.next_node = None:
-        head_value = self.head.value
-        self.head = None
-        self.tail = None
-        return None
-
-
-def contains(self, value):
-    pass
+    def contains(self, value):
+        pass

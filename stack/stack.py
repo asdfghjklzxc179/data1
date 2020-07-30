@@ -16,44 +16,32 @@ Stack class with list storage structure.
 '''
 
 
-class Stack:
-    class Node:
-        def __init__(self, value, next_node):
-            self.value = value
-            self.next_node = next_node
+# class Stack:
+#    def __init__(self):
+#        self.size = 0
+#        self.storage = []
 
-    def __init__(self):
-        self.head = None
-        self.size = 0
+#    def __len__(self):
+#        return self.size
 
-    def __len__(self):
-        return self.size
+#    def push(self, value):
+# add an element to front of array
+#        self.size += 1
+#        self.storage.insert(0, value)
 
-    def is_empty(self):
-        return not self
-
-    def push(self, value):
-        self.head = self.Node(value, self.head)
-        self.size += 1
-
-    def pop(self):
-        if self.is_empty():
-            return None
-        else:
-            result = self.head.value
-            self.head = self.head.next_node
-            self.size -= 1
-            return result
-
-    def top(self):
-        if self.is_empty():
-            return None
-        return self.head.value
+#    def pop(self):
+#        if len(self.storage) == 0:
+#            return None
+# remove first element in storage
+#       self.size -= 1
+#       node = self.storage.pop(0)
+#      return node.value
 
 
-s = Stack()
-s.push(5)
-s.push('five')
-s.push(9)
-s.push('nine')
-print(s.top())
+new_stack = Stack()
+print(len(new_stack))
+new_stack.push(2)
+new_stack.push(3)
+new_stack.push(5)
+print(len(new_stack))
+print(new_stack.storage)
